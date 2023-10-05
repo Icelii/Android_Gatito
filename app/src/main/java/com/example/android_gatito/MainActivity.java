@@ -6,22 +6,33 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.os.CountDownTimer;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
-    Button B;
+public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        B = (Button) findViewById(R.id.btn1);
-        B.setOnClickListener(this);
-    }
+        ProgressBar progbar = findViewById(R.id.Loading);
 
-    @Override
-    public void onClick(View view) {
+        long msFuture = 5000;
+        progbar.setMax((int)msFuture);
 
-        Intent i= new Intent(this, MainActivity2.class);
-        startActivity(i);
+        Intent iniciar= new Intent(this, MainActivity2.class);
+
+        new CountDownTimer(msFuture, 1000)
+        {
+            public void onTick(long msUntilFinished)
+            {
+                progbar.setProgress((int)msUntilFinished);
+            }
+            public void onFinish() {
+                startActivity(iniciar);
+            }
+        }.start();
+
     }
 }

@@ -13,13 +13,17 @@
         android:theme="@style/Theme.Android_Gatito"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity2"
+            android:name=".MainActivity3"
             android:exported="false"
             android:screenOrientation="portrait"/>
         <activity
+            android:name=".MainActivity2"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".MainActivity"
-            android:screenOrientation="portrait"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
