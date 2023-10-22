@@ -5,42 +5,53 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:backgroundTint="@color/md_theme_light_onPrimaryContainer">
 
     <TextView
         android:id="@+id/texto1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bienvenido!!!"
+        android:layout_centerHorizontal="true"
+        android:text="Welcome!!!"
+        android:fontFamily="@font/presstart"
+        android:textAlignment="center"
+        android:textColor="@color/white"
         android:textSize="32sp"
         android:textStyle="bold"
-        android:textAlignment="center"
-        android:layout_centerInParent="true"
-        android:textColor="@color/black"
-        />
+        android:layout_above="@id/animationView"/>
 
     <TextView
         android:id="@+id/texto2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="La partida comenzara en breve"
-        android:textSize="16sp"
-        android:textAlignment="center"
+        android:layout_below="@id/animationView"
         android:layout_centerInParent="true"
-        android:layout_below="@+id/texto1"
         android:layout_marginTop="10dp"
-        android:textColor="@color/black"
+        android:fontFamily="@font/pixelfy"
+        android:text="La partida comenzara en breve"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"
+        app:lottie_rawRes="@raw/nyancatloading"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
         />
 
     <ProgressBar
         android:id="@+id/Loading"
         android:layout_width="285dp"
         android:layout_height="48dp"
+        android:layout_below="@id/texto2"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
         android:max="100"
         android:progress="40"
-        android:textAlignment="center"
-        android:layout_centerInParent="true"
-        android:layout_below="@+id/texto2"
-        android:layout_marginTop="10dp"
-        />
+        android:textAlignment="center" />
 </RelativeLayout>

@@ -14,10 +14,12 @@
         android:layout_marginTop="210dp"
         android:layout_centerHorizontal="true"
         android:text="Ganador!!!"
+        android:fontFamily="@font/pixelfy"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="32sp"
         android:textStyle="bold" />
+
     <TextView
         android:id="@+id/MarcadorFinal"
         android:layout_width="wrap_content"
@@ -25,6 +27,7 @@
         android:textColor="@color/black"
         android:layout_marginTop="10dp"
         android:text="0"
+        android:fontFamily="@font/pixelfy"
         android:textSize="52dp"
         android:textAlignment="center"
         android:textStyle="bold"
@@ -41,6 +44,7 @@
         android:layout_marginTop="8dp"
         android:textStyle="bold"
         android:text="Seguir jugando"
+        android:fontFamily="@font/pixelfy"
         android:textSize="15sp"
         android:textColor="@color/white"
         />
@@ -54,6 +58,7 @@
         android:layout_marginTop="8dp"
         android:textStyle="bold"
         android:text="Reiniciar partida"
+        android:fontFamily="@font/pixelfy"
         android:textSize="15sp"
         android:textColor="@color/white"
         />
